@@ -1,0 +1,94 @@
+/*
+  #foo {} will style the single element declared with an attribute id="foo"
+  .foo {} will style all elements with an attribute class="foo" 
+*/
+
+body {
+    background-color: #a7a4a472;
+  }
+  
+
+  #banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a2b7e;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+    
+    #banner h2 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+
+    #github-link img {
+        height: 30px;
+        margin-right: 10px; /* change the placement witin the banner */
+    }
+
+    #github-link {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        color: white;
+        height: 30px;
+      }
+  
+
+
+
+#chapter-container {
+    width: 70%; /* adjust this value as needed */
+    margin-left: 15%; /* adjust this value as needed */
+    float: left;
+  }
+
+
+  /* Define the layout styles */
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+  
+
+#search-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex-basis: 30%;
+    margin-right: 20px;   
+}
+
+#search-box-banner input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex-basis: 30%;
+    margin-right: 20px;   
+}
+
+.content {
+    flex-basis: 68%;
+}
+
+
+
+

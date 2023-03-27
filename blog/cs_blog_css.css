@@ -41,7 +41,7 @@ body {
     height: 30px;
     }
 
-#chapter-container {
+#chapter_1-container {
     width: 70%; 
     margin-left: 15%; 
     float: left;
@@ -61,7 +61,14 @@ body {
     background-color: #a7a4a472;
     padding: 20px;
     box-sizing: border-box;
+    
   }
+
+  #sidebar details {
+    margin-bottom: 10px;
+  }
+
+
   
   #search-box {
     margin-bottom: 20px;
@@ -76,6 +83,9 @@ body {
     border-radius: 20px;
     margin-top: 30px;
   }
+
+  
+
   
  
   footer {

@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     background-color: #1a2b7e;
     color: white;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -25,7 +25,7 @@ body {
 
 #banner h2 {
     margin: 0;
-    font-size: 30px;
+    font-size: 20px; /* title text size */
 }
 
 #github-link img {
@@ -41,15 +41,17 @@ body {
     height: 30px;
     }
 
-#chapter_1-container {
+  #chapter_1-container {
     width: 70%; 
     margin-left: 15%; 
     float: left;
-    margin-left: 260px; /* move the entile chapter down or up */
-    margin-top: 50px;
-}
-        
-
+    margin-left: 260px; /* move the entire chapter right */
+    margin-top: 75px; /* move the entire chapter down or up */
+    padding-bottom: 100px; /* add extra space at the bottom */
+    overflow: scroll; /* enable scrolling past the end of the last sentce*/
+    height: calc(200vh - 200px); /* set a height to limit the scrolling area */
+  }
+    
 /* Sidebar and search bar */
 #sidebar {
     position: fixed; /* fix the poition of the side bar */
@@ -67,8 +69,6 @@ body {
   #sidebar details {
     margin-bottom: 10px;
   }
-
-
   
   #search-box {
     margin-bottom: 20px;
@@ -76,21 +76,47 @@ body {
   }
   
   #search-box input[type="text"] {
-    width: 90%; /* search box size */
-    padding: 10px;
+    width: 90%; /* search box size for the left (x axis) */
+    padding: 15px; /* scale search box size */ 
     border: 0;
     
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 10px; /* move search box from the bot of the sidebar*/
   }
 
+  .spacer {
+    aspect-ratio: 900/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./layer2.svg');
+  }
   
-
-  
+  .layer2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    z-index: -1;
+    background-image: url('./layer2.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
  
   footer {
-    margin-top: auto;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a2b7e;
+    color: white;
+    padding: 5px;
   }
+  
 
 .content {
     flex-basis: 68%;

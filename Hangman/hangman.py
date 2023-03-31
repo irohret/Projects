@@ -38,11 +38,11 @@ hang = ["""
        |
 ==========""", """
   +----+
-  |  \|
-  O   |
- /|\  |
- /    |
-      |
+  |   \|
+  O    |
+ /|\   |
+ /     |
+       |
 ==========""", """
   +----+
   |   \|
@@ -109,7 +109,7 @@ def game_mode():
 
     elif game_input == "2":
         chosen_word = random.choice(people_choices())
-        print(f"\nYou have chosen '{g_mode[1]}' for your game mode:\n")mode
+        print(f"\nYou have chosen '{g_mode[1]}' for your game mode:\n")
         return chosen_word
 
     elif game_input == "3":
@@ -127,6 +127,9 @@ def game_mode():
         game_mode()
 
 def hangman():
+    '''
+    This is a Python script for a game of Hangman. The game is played by guessing letters in a word. If the guessed letter is in the word, it is revealed in its correct position(s). If the letter is not in the word, a part of the Hangman figure is drawn. The game ends when the word is guessed or when the Hangman figure is complete.
+    '''
     print("H A N G M A N")
 
     chosen_word = game_mode()
@@ -179,7 +182,6 @@ def hangman():
 
                 print(f"Ohh No! It looks like you ran out of lives. The word was {chosen_word} \U0001F641\n.")
                 print(play_again())
-
 
 if __name__ == "__main__":
     print(hangman())

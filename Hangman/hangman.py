@@ -55,13 +55,13 @@ hang = ["""
 =========="""]
 
 def reminder():
-    print("-------------------------------------------------------------------------------------")
-    print("| Notice: Some words make contain a space, a dash(-), period (.), comma(,) colon(:) |")
-    print("-------------------------------------------------------------------------------------\n")
+    print("----------------------------------------------------------------------------------------------")
+    print("| Notice: Some words may contain a space, a dash(-), a period (.), a comma(,), or a colon(:) |")
+    print("----------------------------------------------------------------------------------------------\n")
  
 def clear():   
     '''
-    used to clear the termial bae of the os system 
+    used to clear the termial based on the os system 
     '''
     # for windows   
     if name == 'nt':   
@@ -94,7 +94,7 @@ def countires_choices():
 
 # play game (and again)
 def play_again():
-    print("Would you like to play again? Type Yes or No")
+    print("Would you like to play again? Type Yes or No:")
     q1 = input().lower()
 
     if q1 == "yes" or q1 == "YES" or q1 == "Yes":
@@ -149,7 +149,10 @@ def game_mode():
 
 def hangman():
     '''
-    This is a Python script for a game of Hangman. The game is played by guessing letters in a word. If the guessed letter is in the word, it is revealed in its correct position(s). If the letter is not in the word, a part of the Hangman figure is drawn. The game ends when the word is guessed or when the Hangman figure is complete.
+    This is a Python script for a game of Hangman. The game is played by guessing letters in a word.
+    If the guessed letter is in the word, it is revealed in its correct position(s). If the letter is not 
+    in the word, a part of the Hangman figure is drawn. The game ends when the word is guessed or when the 
+    Hangman figure is complete.
     '''
     print("H A N G M A N")
 

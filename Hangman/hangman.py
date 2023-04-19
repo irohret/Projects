@@ -1,5 +1,7 @@
 
 import random
+from os import system, name  #used for clearing the termianl
+from time import sleep
 
 hang = ["""
    +----+
@@ -52,6 +54,22 @@ hang = ["""
        |
 =========="""]
 
+def reminder():
+    print("-------------------------------------------------------------------------------------")
+    print("| Notice: Some words make contain a space, a dash(-), period (.), comma(,) colon(:) |")
+    print("-------------------------------------------------------------------------------------\n")
+ 
+def clear():   
+    '''
+    used to clear the termial bae of the os system 
+    '''
+    # for windows   
+    if name == 'nt':   
+        _ = system('cls')   
+  
+    # for mac and linux
+    else:   
+        _ = system('clear')   
 
 #game mode types
 def fruit_choices():
@@ -81,6 +99,8 @@ def play_again():
 
     if q1 == "yes" or q1 == "YES" or q1 == "Yes":
         print("Okay, restarting game...\n")
+        sleep(1)
+        clear()
         hangman()
 
     elif q1 == "no" or q1 == "NO" or q1 == "No":
@@ -120,6 +140,7 @@ def game_mode():
     elif game_input == "4":
         chosen_word = random.choice(movie_choices())
         print(f"\nYou have chosen '{g_mode[3]}' for your game mode:\n")
+        reminder()
         return chosen_word
       
     else:
@@ -175,12 +196,12 @@ def hangman():
                 print(answer)
 
         if "_" not in answer:
-            print(f"Well done!! you guessed the word '{chosen_word}' \U0001F600 \n.")
+            print(f"Well done!! you guessed the word '{chosen_word}'\U0001F600.\n")
             print(play_again())
         else:
             if total_lives_left == 7:
 
-                print(f"Ohh No! It looks like you ran out of lives. The word was {chosen_word} \U0001F641\n.")
+                print(f"Ohh No! It looks like you ran out of lives. The word was {chosen_word}\U0001F641.\n")
                 print(play_again())
 
 if __name__ == "__main__":

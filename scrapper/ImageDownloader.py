@@ -53,14 +53,9 @@ def download_images_from_url(url, save_directory):
         print("Failed to download images.")
 
 
-# if __name__ == '__main__':
-#     web_link = url_name
-#     save_directory = "./images"  # desired save directory
-#     download_images_from_url(web_link, save_directory)
-
 if __name__ == '__main__':
     web_link = url_name
-    save_directory = "./images"  # Desired save directory
+    save_directory = "./images"  # Desired save directory. This will create a folder where the script is running at
 
     # Check the operating system and set the appropriate path separator
     if os.name == 'nt':  # Windows
